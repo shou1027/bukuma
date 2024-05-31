@@ -9,27 +9,24 @@ const Header = () => {
         <div className="container mx-auto flex max-w-4xl items-center px-2 py-7">
           <div className="mx-auto flex w-full flex-wrap items-center">
             <div className="flex w-full justify-center font-extrabold text-white lg:w-1/2 lg:justify-start">
-              <Link href="/">
-                <a className="text-2xl text-gray-900 no-underline hover:text-gray-900 hover:no-underline">
-                  🚀 &nbsp; <span className=" text-gray-200">BUKUMA</span>
-                </a>
+              <Link
+                href="/"
+                className="text-2xl text-gray-900 no-underline hover:text-gray-900 hover:no-underline"
+              >
+                🚀 &nbsp; <span className=" text-gray-200">BUKUMA</span>
               </Link>
             </div>
             <div className="flex w-full content-center justify-between pt-2 lg:w-1/2 lg:justify-end lg:pt-0">
               <ul className="list-reset flex flex-1 items-center justify-center lg:flex-none">
                 <li className="py-1 px-4 text-white no-underline">
-                  <Link href="/articles">
-                    <a>Articles</a>
-                  </Link>
+                  <Link href="/articles">Articles</Link>
                 </li>
                 {status !== "loading" && session && (
                   // status が 'loading' でない、つまり認証情報の取得が完了している、
                   // かつ、認証されている場合に、下記が表示されます
                   <>
                     <li className="py-1 px-4 text-white no-underline">
-                      <Link href="/mypage">
-                        <a>MyPage</a>
-                      </Link>
+                      <Link href="/mypage">MyPage</Link>
                     </li>
                     <li className="py-1 px-4 text-white no-underline">
                       <button onClick={() => signOut()}>
